@@ -139,13 +139,14 @@
     <script>
         // Настройки игры
         const config = {
+    playerRadius: 25,
     playerSpeed: 5, // Скорость игрока
     playerHealth: 100,
     bulletDamage: 10,
     enemyHealth: 10,
     enemyDamage: 25,
     enemySpeed: 1,
-    enemyRadius: 60, // Увеличенный размер врагов
+    enemyRadius: 100, // Увеличенный размер врагов
     spawnDelay: 3500,
     invincibilityTime: 1000,
     boostDuration: 10000, // 10 секунд действия буста
@@ -235,9 +236,9 @@
  
             // Создание игрока
             gameState.player = {
-                x: canvas.width / 2,
-                y: canvas.height / 2,
-                radius: 15,
+                x: canvas.width / 1.5,
+                y: canvas.height / 1.5,
+                radius: config.playerRadius,
                 health: config.playerHealth,
                 maxHealth: config.playerHealth,
                 speed: config.playerSpeed,
